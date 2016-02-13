@@ -38,8 +38,8 @@ public class Lab4_1 {
     }
     public static int rand (int a, int b) {
             if (a > b)
-                return (int)(Math.random()*(a-b+1)+b);
+                return (int) (Math.random()*(a-b+1))+b;
             else 
-                return (int)(Math.random()*(b-a+1)+a);
+                return (int) (Math.random()*(b-a+1))+a;
         }   
 }
