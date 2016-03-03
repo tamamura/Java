@@ -44,11 +44,19 @@ public class Lab4_2 {
         
         String str_str = in.readLine();
         int str = Integer.parseInt(str_str);
-        print(nums, str);
+        int arr[] = new int[10];
+        
+        print(nums, str, arr);
+        System.out.println();
+        Lab4_3 ar = new Lab4_3();
+        ar.sort(arr);
+        
     }
     
-    public static void print(int[][] nums, int a) {
-        for (int i = 0; i < 10; i++)           
-            System.out.print(nums[a-1][i]+" ");
+    public static void print(int[][] nums, int a, int[] arr) {
+        for (int i = 0; i < 10; i++){
+            arr[i] = nums[a-1][i];
+            System.out.print(arr[i]+" ");  
+        }                                     
     }
 }
