@@ -19,6 +19,8 @@ public class Circle {
     double x;
     double y;
     double r;
+    double xp;
+    double yp;
     
     Circle() throws IOException {
         Reader inputStreamReader = new InputStreamReader(System.in);
@@ -53,8 +55,57 @@ public class Circle {
     
     void point(Circle cir) {
         double a = Math.sqrt(Math.pow(cir.x - x, 2) + Math.pow(cir.y - y, 2));
-        if (a == cir.r + r || a == Math.abs(cir.r - r)) {
+        /*if (a == cir.r + r || a == Math.abs(cir.r - r)) {
             System.out.println("Имеется одна точка пересечения");
+        } else System.out.println("Имеются 2 или 0 точек пересечения");*/
+        if (a == cir.r + r) {
+            if (r == cir.r) {
+                if (x == cir.x){
+                    xp = x;
+                } else if (x > cir.x) {
+                    xp = cir.x + (x - cir.x) / 2;
+                } else xp = x + (cir.x - x) / 2;
+            } else {
+                double xd = Math.abs(cir.x - x) * (r / (cir.r + r));
+                if (x == cir.x){
+                    xp = x;
+                } else if (x > cir.x) {
+                    xp = x - xd;
+                } else xp = x + xd;
+            }
+            if (y == cir.y) {
+                yp = y;
+            } else if (y < cir.y)
+                yp = y + Math.sqrt(r*r - (xp - x) * (xp - x));
+            else yp = y - Math.sqrt(r*r - (xp - x) * (xp - x));
+            System.out.println(xp+" "+yp);
+        } else if (a == Math.abs(cir.r - r)) {
+            if (r > cir.r) {
+                double xd = Math.abs(cir.x - x) * (cir.r / (r - cir.r));
+                if (x == cir.x) {
+                    xp = x;
+                } else if (x > cir.x) {
+                    xp = cir.x - xd;
+                } else xp = cir.x + xd;
+                if (y == cir.y) {
+                    yp = y;
+                } else if (y < cir.y)
+                    yp = y + Math.sqrt(r*r - (xp - x) * (xp - x));
+                else yp = y - Math.sqrt(r*r - (xp - x) * (xp - x));
+            } else {
+                double xd = Math.abs(cir.x - x) * (r / (cir.r - r));
+                if (x == cir.x) {
+                    xp = x;
+                } else if (x > cir.x) {
+                    xp = x + xd;
+                } else xp = x - xd;
+                if (y == cir.y) {
+                    yp = y;
+                } else if (y < cir.y)
+                    yp = y - Math.sqrt(r*r - (xp - x) * (xp - x));
+                else yp = y + Math.sqrt(r*r - (xp - x) * (xp - x));
+            }
+            System.out.println(xp+" "+yp);
         } else System.out.println("Имеются 2 или 0 точек пересечения");
     }    
 }

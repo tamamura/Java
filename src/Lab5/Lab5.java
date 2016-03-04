@@ -15,13 +15,13 @@ public class Lab5 {
     public static void main(String[] args) throws IOException {
         
         Circle o1 = new Circle();
-        //Circle o2 = new Circle();
+        Circle o2 = new Circle();
          
-        o1.center();
+        //o1.center();
         //o2.center();
         
         //o1.okrug();
         //o1.distance(o2);
-        //o1.point(o2);
+        o1.point(o2);
     }
 }
