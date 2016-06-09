@@ -15,10 +15,10 @@ public class Lab3_2 {
     public static void main(String[] args) {
         
         int[] nums = new int[50];
-        int a = -1;
-        for (int i = 0; i <=49; i++) {
-            a = a + 2;
+        int a = 1;
+        for (int i = 0; i < nums.length; i++) {
             nums[i] = a;
+            a = a + 2;
         }
         for (int i = 0; i < nums.length; i++)
             System.out.print(nums[i]+" ");

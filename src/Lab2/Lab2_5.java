@@ -19,6 +19,8 @@ public class Lab2_5 {
     
      public static void main(String[] args) throws IOException {
          
+        System.out.println("Введите две строки"); 
+         
         Reader inputStreamReader = new InputStreamReader(System.in);
         BufferedReader in = new BufferedReader(inputStreamReader);
         String s1 = in.readLine();

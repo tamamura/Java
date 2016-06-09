@@ -13,12 +13,19 @@ public class Lab6_2 {
     
     public static void main(String[] args) {
         
-        Cat cat = new Cat();
-        cat.print();
+        Cat c = new Cat(); 
         
-        //Dog dog = new Dog();
-        //dog.print();
+        System.out.println("");
+        c.getInfo();
         
+        System.out.println("");
+        c.setName("stul");
+        c.setAge(5);
+        c.setGender("f");
+        c.setWeight(15);
+        
+        c.getInfo();
+       
     }
     
 }

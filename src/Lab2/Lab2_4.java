@@ -35,9 +35,9 @@ public class Lab2_4 {
     public static void sravnenie(int m, int n) {
         
         if (m > n) 
-            System.out.println(n);
+            System.out.println("Число " + n + " меньше");
         else if (m < n)
-            System.out.println(m);
+            System.out.println("Число " + m + " меньше");
         else System.out.println("Числа одинаковы");              
     
     }

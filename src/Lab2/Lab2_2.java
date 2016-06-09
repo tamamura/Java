@@ -30,8 +30,8 @@ public class Lab2_2 {
         int m = Integer.parseInt(m_str), //преобразовываем строку в число.
             n = Integer.parseInt(n_str); 
         
-        for (int i = 1; i <= m; i++) {
-            for (int j = 1; j <= n; j++)
+        for (int i = 0; i < m; i++) {
+            for (int j = 0; j < n; j++)
                 System.out.print(8+" ");
             System.out.println();
         }

@@ -105,7 +105,7 @@ public class Circle {
                     yp = y - Math.sqrt(r*r - (xp - x) * (xp - x));
                 else yp = y + Math.sqrt(r*r - (xp - x) * (xp - x));
             }
-            System.out.println(xp+" "+yp);
+            System.out.println(xp + " " + yp);
         } else System.out.println("Имеются 2 или 0 точек пересечения");
     }    
 }

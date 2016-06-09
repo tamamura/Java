@@ -5,25 +5,38 @@
  */
 package Lab6;
 
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
-import java.io.Reader;
+import java.util.Scanner;
 
 /**
- *
  * @author kvs1132b
  */
+
 public class Horse {
-    
+
     String name;
-    
-    Horse() throws IOException {
-        
-        Reader inputStreamReader = new InputStreamReader(System.in);
-        BufferedReader in = new BufferedReader(inputStreamReader);
-        
-        System.out.print("Задайте кличку лошади: ");
-        name = in.readLine();
+    String wings;
+
+    Horse() {
+
+        Scanner sc = new Scanner(System.in);
+
+        try {
+            System.out.print("Введите кличку: ");
+            name = sc.nextLine();
+            System.out.print("Это пегас? (y/n) ");
+            wings = sc.nextLine();
+
+        } catch (Exception e) {
+            System.out.println("Ошибка ввода " + e);
+        }
+    }
+}
+
+class Pegas extends Horse {
+
+    void fly() {
+        if ("y".equals(wings)) System.out.println(name + " умеет летать");
+        else if ("n".equals(wings)) System.out.println(name + " не умеет летать");
+        else System.out.println("Я не знаю, что у вас за лошадка");
     }
 }

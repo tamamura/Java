@@ -40,10 +40,10 @@ public class Lab2_6 {
         int a = Integer.parseInt(a_str), b = Integer.parseInt(b_str),
             c = Integer.parseInt(c_str), d = Integer.parseInt(d_str);
         
-        min(min(a, b), min(c, d));        
+        System.out.println(min(min(a, b), min(c, d)) + " - меньшее число");
     }
     
-    public static int min(int a, int b) {
+    static int min(int a, int b) {
         if (a <= b)
             return a;
         else

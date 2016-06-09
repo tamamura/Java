@@ -15,18 +15,16 @@ public class Lab3_3 {
     public static void main(String[] args) {
        
         int[] nums = new int[15];
-        for (int i = 0; i < nums.length; i++)
-            nums[i] = ((int)(Math.random()*10));
-
-        for (int i = 0; i < nums.length; i++)
+        for (int i = 0; i < nums.length; i++) {
+            nums[i] = (int)(Math.random()*10);
             System.out.print(nums[i]+" ");
-        
+        }
         System.out.println();
         
         int a = 0;
         for (int i = 0; i < nums.length; i++) 
             if (nums[i] % 2 == 0)
-                a = a + 1;
+                a++;
 
         System.out.println("Четных цифр: "+a);       
     }
