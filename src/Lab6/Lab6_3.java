@@ -19,7 +19,7 @@ public class Lab6_3 {
                 + "так что удачи вам!\n");
         
         f.pause(5000);
-        f.exp = 99;
+        //f.exp = 99;
         while (f.lvl == 1) f.fishRoll();
         System.out.println("Поздравляю! Вы эволюционировали до уровня животного.");
         while (f.lvl == 2) f.aniRoll();
